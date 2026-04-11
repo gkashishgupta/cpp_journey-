@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   const double PI = 3.14159;
+   double radius;
+   
+   cout << "Radius enter karo: ";
+   cin >> radius;
+   
+   double circumference = 2 * PI * radius;
+   cout << circumference << " cm";
+
+   return 0;
+}
