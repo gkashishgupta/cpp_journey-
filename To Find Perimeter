@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int ch;
+    double ans;
+    const double PI = 3.14159;
+
+    cout << "PERIMETER CALCULATOR\n";
+    cout << "1. Square\n2. Rectangle\n3. Triangle\n4. Circle\n5. Parallelogram\n6. Rhombus\n7. Semicircle\n";
+    cout << "Choice: ";
+    cin >> ch;
+
+    if (ch == 1) {
+        double s;
+        cout << "Side: "; cin >> s;
+        ans = 4 * s;
+    } else if (ch == 2) {
+        double l, w;
+        cout << "Length: "; cin >> l;
+        cout << "Width: "; cin >> w;
+        ans = 2 * (l + w);
+    } else if (ch == 3) {
+        double a, b, c;
+        cout << "Side a: "; cin >> a;
+        cout << "Side b: "; cin >> b;
+        cout << "Side c: "; cin >> c;
+        ans = a + b + c;
+    } else if (ch == 4) {
+        double r;
+        cout << "Radius: "; cin >> r;
+        ans = 2 * PI * r;
+    } else if (ch == 5) {
+        double a, b;
+        cout << "Side a: "; cin >> a;
+        cout << "Side b: "; cin >> b;
+        ans = 2 * (a + b);
+    } else if (ch == 6) {
+        double s;
+        cout << "Side: "; cin >> s;
+        ans = 4 * s;
+    } else if (ch == 7) {
+        double r;
+        cout << "Radius: "; cin >> r;
+        ans = PI * r + 2 * r;
+    } else {
+        cout << "Wrong choice!\n";
+        return 1;
+    }
+
+    cout << "Perimeter = " << ans << "\n";
+    return 0;
+}
